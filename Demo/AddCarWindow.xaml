@@ -1,0 +1,28 @@
+﻿<Window x:Class="Demo.AddCarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo"
+        xmlns:vm="clr-namespace:Demo.ViewModel"
+        mc:Ignorable="d"
+        Title="AddCarWindow" Height="450" Width="450">
+    <Window.DataContext>
+        <vm:AddViewModel/>
+    </Window.DataContext>
+    <Grid x:Name="AddGrid">
+        <Label Content="Марка" HorizontalAlignment="Left" Margin="26,43,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="BrandTB" Text="{Binding Brand}" HorizontalAlignment="Left" Margin="26,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <Label Content="Модель" HorizontalAlignment="Left" Margin="26,128,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="ModelTB" Text="{Binding Model}" HorizontalAlignment="Left" Margin="26,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <Label Content="Двигатель" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="EngineTB" Text="{Binding Engine}" HorizontalAlignment="Left" Margin="26,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <Label Content="Привод" HorizontalAlignment="Left" Margin="252,43,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="TransmissionTB" Text="{Binding Transmission}" HorizontalAlignment="Left" Margin="252,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <Label Content="Тип кузова" HorizontalAlignment="Left" Margin="252,128,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="BodyTB" Text="{Binding Body}" HorizontalAlignment="Left" Margin="252,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <Label Content="Стоимость" HorizontalAlignment="Left" Margin="252,227,0,0" VerticalAlignment="Top" FontSize="16" />
+        <TextBox x:Name="CostTB" Text="{Binding Cost}" HorizontalAlignment="Left" Margin="252,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <Button x:Name="AddCarBut" Content="Добавить" HorizontalAlignment="Left" Margin="162,332,0,0" VerticalAlignment="Top" Height="36" Width="123" Command="{Binding AddCommand}"/>
+    </Grid>
+</Window>
