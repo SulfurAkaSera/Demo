@@ -12,17 +12,17 @@
     </Window.DataContext>
     <Grid x:Name="AddGrid">
         <Label Content="Марка" HorizontalAlignment="Left" Margin="26,43,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="BrandTB" Text="{Binding Brand}" HorizontalAlignment="Left" Margin="26,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <TextBox x:Name="BrandTB" Text="{Binding Car.Brand}" HorizontalAlignment="Left" Margin="26,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
         <Label Content="Модель" HorizontalAlignment="Left" Margin="26,128,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="ModelTB" Text="{Binding Model}" HorizontalAlignment="Left" Margin="26,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <TextBox x:Name="ModelTB" Text="{Binding Car.Model}" HorizontalAlignment="Left" Margin="26,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
         <Label Content="Двигатель" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="EngineTB" Text="{Binding Engine}" HorizontalAlignment="Left" Margin="26,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
+        <TextBox x:Name="EngineTB" Text="{Binding Car.Engine}" HorizontalAlignment="Left" Margin="26,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="25"/>
         <Label Content="Привод" HorizontalAlignment="Left" Margin="252,43,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="TransmissionTB" Text="{Binding Transmission}" HorizontalAlignment="Left" Margin="252,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <TextBox x:Name="TransmissionTB" Text="{Binding Car.Transmission}" HorizontalAlignment="Left" Margin="252,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
         <Label Content="Тип кузова" HorizontalAlignment="Left" Margin="252,128,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="BodyTB" Text="{Binding Body}" HorizontalAlignment="Left" Margin="252,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <TextBox x:Name="BodyTB" Text="{Binding Car.Body}" HorizontalAlignment="Left" Margin="252,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
         <Label Content="Стоимость" HorizontalAlignment="Left" Margin="252,227,0,0" VerticalAlignment="Top" FontSize="16" />
-        <TextBox x:Name="CostTB" Text="{Binding Cost}" HorizontalAlignment="Left" Margin="252,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
+        <TextBox x:Name="CostTB" Text="{Binding Car.Cost}" HorizontalAlignment="Left" Margin="252,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
         <Button x:Name="AddCarBut" Content="Добавить" HorizontalAlignment="Left" Margin="162,332,0,0" VerticalAlignment="Top" Height="36" Width="123" Command="{Binding AddCommand}"/>
     </Grid>
 </Window>

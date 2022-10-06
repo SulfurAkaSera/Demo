@@ -12,10 +12,10 @@ namespace Demo.Command.AddWindow
     public class AddCommand : ICommand
     {
         private DataService _dataService;
+        private Car _car;
 
         public event EventHandler CanExecuteChanged;
 
-        private Car _car; 
         public AddCommand(Car car, DataService dataService)
         {
             _car = car;

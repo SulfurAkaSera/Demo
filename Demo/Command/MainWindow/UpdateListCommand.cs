@@ -1,4 +1,5 @@
 ﻿using Demo.Service;
+using Demo.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,14 @@ namespace Demo.Command.MainWindow
 {
     public class UpdateListCommand : ICommand
     {
-        public event EventHandler CanExecuteChanged;
         private DataService _dataService;
+        private MainViewModel _viewModel;
 
-        public UpdateListCommand(DataService dataService)
+        public event EventHandler CanExecuteChanged;
+
+        public UpdateListCommand(DataService dataService, MainViewModel viewModel)
         {
+            _viewModel = viewModel;
             _dataService = dataService;
         }
 
@@ -25,7 +29,7 @@ namespace Demo.Command.MainWindow
 
         public void Execute(object parameter)
         {
-            _dataService.GetData();
+            _viewModel.SetCars(_dataService.GetCars());
         }
     }
 }

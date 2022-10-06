@@ -37,6 +37,7 @@ namespace Demo.Service
 
         public void CreateTable()
         {
+            _connection.Close();
             _connection.Open();
             SqlCommand command = new SqlCommand(@"SELECT OBJECT_ID (N'dbo.Cars', N'U')", _connection);
             bool isNotCreated = true;
@@ -65,8 +66,9 @@ namespace Demo.Service
             _connection.Close();
         }
 
-        public void GetData()
+        private void GetData()
         {
+            _connection.Close();
             _connection.Open();
             if (_cars.Count != 0)
                 _cars.Clear();
@@ -81,6 +83,7 @@ namespace Demo.Service
 
         public void Insert(Car car)
         {
+            _connection.Close();
             _connection.Open();
             SqlCommand command = new SqlCommand(car.GetInsertString(), _connection);
             command.Parameters.AddRange(car.GetParameters().ToArray());
@@ -91,6 +94,7 @@ namespace Demo.Service
 
         public void Delete(Car car)
         {
+            _connection.Close();
             _connection.Open();
             SqlCommand command = new SqlCommand("DELETE FROM [Cars] WHERE Id=@Id", _connection);
             command.Parameters.Add(new SqlParameter("@Id", car.Id));
@@ -99,7 +103,12 @@ namespace Demo.Service
             _connection.Close();
         }
 
-        public ObservableCollection<Car> GetCars() => _cars;
+        public ObservableCollection<Car> GetCars()
+        {
+            Update.Invoke();
+            return _cars;   
+        }
+            
 
         public void ConnectionDispose()
         {

@@ -11,7 +11,7 @@
         <vm:MainViewModel/>
     </Window.DataContext>
     <Grid>
-        <ListView x:Name="List" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}">
+        <ListView x:Name="List" SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding Cars}">
             <ListView.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Добавить" Command="{Binding AddCommand}"/>
