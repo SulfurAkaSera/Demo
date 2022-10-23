@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Demo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Green"/>
+                <Setter Property="BorderBrush" Value="GreenYellow"/>
+                <Setter Property="Foreground" Value="GreenYellow"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="FontFamily" Value="Sans"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

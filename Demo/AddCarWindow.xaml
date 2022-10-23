@@ -23,6 +23,7 @@
         <TextBox x:Name="BodyTB" Text="{Binding Car.Body}" HorizontalAlignment="Left" Margin="252,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
         <Label Content="Стоимость" HorizontalAlignment="Left" Margin="252,227,0,0" VerticalAlignment="Top" FontSize="16" />
         <TextBox x:Name="CostTB" Text="{Binding Car.Cost}" HorizontalAlignment="Left" Margin="252,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25"/>
-        <Button x:Name="AddCarBut" Content="Добавить" HorizontalAlignment="Left" Margin="162,332,0,0" VerticalAlignment="Top" Height="36" Width="123" Command="{Binding AddCommand}"/>
+        <!--Ниже пример использования стиля для кнопки, чтобы посмотреть как создавался стиль зайди в файл App.xaml-->
+        <Button Style="{StaticResource ButtonStyle}" x:Name="AddCarBut" Content="Добавить" HorizontalAlignment="Left" Margin="162,332,0,0" VerticalAlignment="Top" Height="36" Width="123" Command="{Binding AddCommand}" Foreground="GreenYellow"/>
     </Grid>
 </Window>
